@@ -10,5 +10,11 @@ fn main() {
         if let Ok(msg) = packed::RelayMessage::from_slice(&data) {
             msg.to_enum();
         }
+
+        let _ = packed::CellbaseWitness::from_slice(&data);
+
+        let _ = packed::IdentifyReader::from_slice(&data);
+
+        let _ = packed::TimeReader::from_slice(&data);
     });
 }
